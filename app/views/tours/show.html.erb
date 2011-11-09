@@ -1,20 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
-  <%= @tour.name %>
+	<h2><%= @tour.name %></h2>
+	By <%= @tour.user %>
 </p>
 
-<p>
-  <b>User:</b>
-  <%= @tour.user %>
-</p>
+<br/>
 
-<h2>Places</h2>
-<%= render @tour.places%>
+<table>
+	<tr>
+		<%= render @tour.places%>
+	</tr>
+</table>
 
 <h2>Add a place:</h2>
 <%= render "places/form" %>
 
-<%= link_to 'Edit', edit_tour_path(@tour) %> |
-<%= link_to 'Back', tours_path %>
+<%= link_to 'Back to list of tours', tours_path %>
