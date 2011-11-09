@@ -1,5 +1,9 @@
 WalkingTours::Application.routes.draw do
-  resources :tours
+  resources :tours do
+    resources :places
+  end
+  
+  root :to => "tours#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

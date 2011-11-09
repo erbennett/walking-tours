@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111101021631) do
+ActiveRecord::Schema.define(:version => 20111109022604) do
+
+  create_table "places", :force => true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.integer  "tour_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "tours", :force => true do |t|
     t.string   "name"
