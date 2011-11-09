@@ -1,0 +1,11 @@
+<p><%= place.name %></p>
+
+<p>
+  <%= image_tag(place.url, :height => "300") %>
+</p>
+
+<p>
+  <%= link_to 'Remove place', [place.tour, place],
+               :confirm => 'Are you sure?',
+               :method => :delete %>
+</p>
